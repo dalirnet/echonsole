@@ -1,0 +1,19 @@
+{
+  "name": "echonsole",
+  "version": "1.0.0",
+  "description": "Echo your web console",
+  "main": "index.js",
+  "repository": "https://github.com/dalirnet/echonsole.git",
+  "author": "Amir Reza Dalir <dalirnet@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "console",
+    "echo",
+    "debug",
+    "broadcast"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "socket.io": "^4.1.3"
+  }
+}
