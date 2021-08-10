@@ -1,0 +1,6 @@
+{
+    "restartable": false,
+    "verbose": false,
+    "watch": "server/index.js",
+    "ext": "js"
+}

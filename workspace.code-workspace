@@ -1,13 +1,29 @@
 {
     "folders": [
         {
+            "path": "server"
+        },
+        {
+            "path": "client"
+        },
+        {
+            "path": "host"
+        },
+        {
+            "path": "config"
+        },
+        {
+            "path": "dist"
+        },
+        {
             "path": "."
         }
     ],
     "settings": {
         "files.exclude": {
             "**/node_modules": true,
-            "**/.*": true
+            "**/.*": true,
+            "**/*.lock": true
         }
     }
 }

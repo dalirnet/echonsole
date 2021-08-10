@@ -1,19 +1,40 @@
 {
-  "name": "echonsole",
-  "version": "1.0.0",
-  "description": "Echo your web console",
-  "main": "index.js",
-  "repository": "https://github.com/dalirnet/echonsole.git",
-  "author": "Amir Reza Dalir <dalirnet@gmail.com>",
-  "license": "MIT",
-  "keywords": [
-    "console",
-    "echo",
-    "debug",
-    "broadcast"
-  ],
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "socket.io": "^4.1.3"
-  }
+    "name": "echonsole",
+    "version": "1.0.0",
+    "description": "Echo your web console",
+    "main": "server/index.js",
+    "type": "module",
+    "repository": "https://github.com/dalirnet/echonsole.git",
+    "author": "Amir Reza Dalir <dalirnet@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev:server": "nodemon server/index.js --config config/nodemon.json",
+        "dev:client": "rollup --config config/rollup.config.js --watch --watch.include client/index.js --silent",
+        "start": "node server/index.js",
+        "build": "rollup --config config/rollup.config.js --silent"
+    },
+    "keywords": [
+        "console",
+        "echo",
+        "debug",
+        "broadcast"
+    ],
+    "dependencies": {
+        "bowser": "^2.11.0",
+        "express": "^4.17.1",
+        "lodash": "^4.17.21",
+        "socket.io": "^4.1.3"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.15.0",
+        "@babel/preset-env": "^7.15.0",
+        "@rollup/plugin-babel": "^5.3.0",
+        "@rollup/plugin-commonjs": "^20.0.0",
+        "@rollup/plugin-node-resolve": "^13.0.4",
+        "babel": "^6.23.0",
+        "nodemon": "^2.0.12",
+        "rollup": "^2.56.1",
+        "rollup-plugin-uglify": "^6.0.4",
+        "socket.io-client": "^4.1.3"
+    }
 }
