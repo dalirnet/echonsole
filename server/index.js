@@ -41,11 +41,11 @@ const banner = (message) => {
 // start
 io.on('connection', (socket) => {
     const { os, browser } = detect(socket.handshake.headers['user-agent'])
-    banner(_.join(['Connection', os, browser, '"' + socket.handshake.headers.referer + '"'], ' / '))
+    banner(_.join(['Console', os, browser, '"' + socket.handshake.headers.referer + '"'], ' | '))
     socket.on('callback', ({ command, location, userAgent, output }) => {
         try {
             const { os, browser } = detect(userAgent)
-            banner(_.join(['Callback', os, browser, '"' + location + '"'], ' / '))
+            banner(_.join(['Callback', os, browser, '"' + location + '"'], ' | '))
             console.log(' $', command)
             console.log(' »', output, '\n')
         } catch (e) {}
@@ -64,7 +64,7 @@ server.listen(3030, () => {
         '127.0.0.1'
     )
 
-    banner('Ready on "' + 'http://' + ip + ':3030/echonsole.js' + '"')
+    banner('Attach "' + 'http://' + ip + ':3030/echonsole.js' + '"')
 })
 
 // watch user input

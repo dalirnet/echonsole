@@ -1,7 +1,7 @@
 {
     "name": "echonsole",
-    "version": "1.0.0",
-    "description": "Echo your web console",
+    "version": "1.0.1",
+    "description": "CLI simulator for broadcasting javascript commands",
     "main": "server/index.js",
     "type": "module",
     "repository": "https://github.com/dalirnet/echonsole.git",
@@ -14,6 +14,8 @@
         "build": "rollup --config config/rollup.config.js --silent"
     },
     "keywords": [
+        "cli",
+        "simulator",
         "console",
         "echo",
         "debug",
