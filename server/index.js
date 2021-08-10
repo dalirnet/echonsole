@@ -1,10 +1,14 @@
 import _ from 'lodash'
 import os from 'os'
+import url from 'url'
+import path from 'path'
 import readline from 'readline'
 import express from 'express'
 import http from 'http'
 import * as ws from 'socket.io'
 import bowser from 'bowser'
+
+const root = path.resolve(path.dirname(url.fileURLToPath(import.meta.url)), '../')
 
 const echonsole = (port = 3030) => {
     // init cli
@@ -15,8 +19,8 @@ const echonsole = (port = 3030) => {
 
     // init express
     const app = express()
-    app.use(express.static('host'))
-    app.use(express.static('dist'))
+    app.use(express.static(path.resolve(root, 'host')))
+    app.use(express.static(path.resolve(root, 'dist')))
 
     // init http server
     const server = http.createServer(app)
