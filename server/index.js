@@ -26,7 +26,12 @@ const echonsole = () => {
     const server = http.createServer(app)
 
     // init socket.io
-    const io = new ws.Server(server, { serveClient: false })
+    const io = new ws.Server(server, {
+        cors: {
+            origin: '*',
+        },
+        serveClient: false,
+    })
 
     const detect = (userAgent) => {
         const parsed = bowser.parse(userAgent)

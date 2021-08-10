@@ -1,6 +1,6 @@
 {
     "name": "echonsole",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "CLI simulator for broadcasting javascript commands",
     "main": "server/index.js",
     "type": "module",
