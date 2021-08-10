@@ -1,6 +1,6 @@
 {
     "name": "echonsole",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "CLI simulator for broadcasting javascript commands",
     "main": "server/index.js",
     "type": "module",
@@ -12,6 +12,9 @@
         "dev:client": "rollup --config config/rollup.config.js --watch --watch.include client/index.js --silent",
         "start": "node server/index.js",
         "build": "rollup --config config/rollup.config.js --silent"
+    },
+    "bin": {
+        "echonsole": "./cli.js"
     },
     "keywords": [
         "cli",
