@@ -1,7 +1,7 @@
 import io from 'socket.io-client'
 
 document.addEventListener('DOMContentLoaded', () => {
-    const socket = io()
+    const socket = io('http://' + window.location.hostname + ':3030/')
     const callback = ({ output, command }) => {
         socket.emit('callback', {
             command,

@@ -1,6 +1,6 @@
 {
     "name": "echonsole",
-    "version": "1.0.2",
+    "version": "1.0.",
     "description": "CLI simulator for broadcasting javascript commands",
     "main": "server/index.js",
     "type": "module",
@@ -8,9 +8,9 @@
     "author": "Amir Reza Dalir <dalirnet@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "dev:server": "nodemon server/index.js --config config/nodemon.json",
+        "dev:server": "nodemon index.js --config config/nodemon.json",
         "dev:client": "rollup --config config/rollup.config.js --watch --watch.include client/index.js --silent",
-        "start": "node server/index.js",
+        "start": "node index.js",
         "build": "rollup --config config/rollup.config.js --silent"
     },
     "bin": {

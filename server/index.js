@@ -10,7 +10,7 @@ import bowser from 'bowser'
 
 const root = path.resolve(path.dirname(url.fileURLToPath(import.meta.url)), '../')
 
-const echonsole = (port = 3030) => {
+const echonsole = () => {
     // init cli
     const cli = readline.createInterface({
         input: process.stdin,
@@ -58,7 +58,7 @@ const echonsole = (port = 3030) => {
     })
 
     // start http server
-    server.listen(port, () => {
+    server.listen(3030, () => {
         const ip = _.get(
             _.find(_.flatten(_.values(os.networkInterfaces())), {
                 family: 'IPv4',
@@ -69,7 +69,7 @@ const echonsole = (port = 3030) => {
             '127.0.0.1'
         )
 
-        banner('Attach "' + 'http://' + ip + ':' + port + '/echonsole.js' + '"')
+        banner('Attach "' + 'http://' + ip + ':3030/echonsole.js' + '"')
     })
 
     // watch user input
